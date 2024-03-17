@@ -1,0 +1,5 @@
+package com.spring.india.repository;
+
+public interface EmployeeRepository {
+
+}

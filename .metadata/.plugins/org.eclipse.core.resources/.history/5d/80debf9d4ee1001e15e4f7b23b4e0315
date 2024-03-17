@@ -1,0 +1,7 @@
+package com.india.spring.service;
+
+public interface RegisterService {
+	public EmpDTO registerEmpInfo() {
+		
+	}
+}

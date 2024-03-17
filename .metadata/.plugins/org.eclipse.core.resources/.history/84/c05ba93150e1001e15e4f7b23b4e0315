@@ -1,0 +1,16 @@
+package com.india.spring.service.impl;
+
+import com.india.spring.dto.EmpDTO;
+import com.india.spring.service.RegisterService;
+
+public class RegisterServiceImpl implements RegisterService {
+	@Override
+	public EmpDTO registerEmpInfo(EmpDTO empDTO) {
+		return null;
+	}
+
+	@Override
+	public EmpDTO registerEmpInfo1(EmpDTO empDTO) {
+		return null;
+	}
+}

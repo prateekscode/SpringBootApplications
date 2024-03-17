@@ -1,0 +1,9 @@
+package com.india.spring.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.india.spring.entity.Emp;
+
+public interface EmployeeRepository extends CrudRepository<Emp, Integer>{
+	public List<Emp> findByName();
+}

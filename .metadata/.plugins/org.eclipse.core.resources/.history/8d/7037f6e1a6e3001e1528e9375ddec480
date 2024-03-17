@@ -1,0 +1,87 @@
+package com.india.spring.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import com.india.spring.dto.*;
+import com.india.spring.entity.Emp;
+import com.india.spring.service.RegisterService;
+
+@RestController
+public class RegisterController {
+	
+	@Autowired
+	private RegisterService registerService;
+
+	@RequestMapping(value = "/regn", method = RequestMethod.POST)
+	public ResponseEntity<EmpDTO> registerEmpInfo(@RequestParam("eid") int eid, @RequestParam("name") String name,
+			@RequestParam("phone") long phone, @RequestParam("city") String city) {
+		System.out.println("registerEmpInfo--ResponseEntity");
+		EmpDTO empDTO=new EmpDTO(eid,name,phone,city);
+		
+		EmpDTO emDTO=registerService.registerEmpInfo(empDTO);
+		
+		System.out.println(eid + "\t" + name + "\t" + phone + "\t" + city);
+		return new ResponseEntity<>(emDTO,HttpStatus.CREATED);
+	}
+	
+	@RequestMapping(value = "/regn1", method = RequestMethod.POST)
+	public ResponseEntity<EmpDTO> registerEmpInfo1(@RequestBody EmpDTO obj) {
+		System.out.println("registerEmpInfo1--ResponseEntity");
+		EmpDTO empDTO=registerService.registerEmpInfo1(obj);
+
+		
+		System.out.println(obj.getEid()+"\t"+obj.getName()+"\t"+obj.getPhone()+"\t"+obj.getCity());
+		return new ResponseEntity<>(empDTO,HttpStatus.CREATED);
+	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.PUT)
+	public ResponseEntity<EmpDTO> updateEmpInfo(@RequestBody EmpDTO obj) {
+		System.out.println("registerEmpInfo1--ResponseEntity");
+		EmpDTO empDTO=registerService.registerEmpInfo1(obj);
+
+		
+		System.out.println(obj.getEid()+"\t"+obj.getName()+"\t"+obj.getPhone()+"\t"+obj.getCity());
+		return new ResponseEntity<>(empDTO,HttpStatus.CREATED);
+	}
+	
+	@RequestMapping(value = "/find", method = RequestMethod.GET)
+	public ResponseEntity<EmpDTO> getEmpInfo(@RequestParam("eid") int eid) {
+		System.out.println("registerEmpInfo1--ResponseEntity");
+		EmpDTO empDTO=registerService.getEmpInfo(eid);
+		System.out.println(empDTO);
+		return new ResponseEntity<>(empDTO,HttpStatus.CREATED);
+	}
+	
+	@RequestMapping(value = "/findbyname", method = RequestMethod.GET)
+	public ResponseEntity<List<Emp>> getEmpInfoByName(@RequestParam("name") String name) {
+		System.out.println("registerEmpInfo1--ResponseEntity");
+		List<Emp> empList =registerService.getEmpInfoByName(name);
+		System.out.println(empList);
+		return new ResponseEntity<>(empList,HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/findbynameandphone", method = RequestMethod.GET)
+	public ResponseEntity<List<Emp>> getEmpInfoByPhone(@RequestParam("name") String name,@RequestParam("phone") long phone) {
+		System.out.println("registerEmpInfo1--ResponseEntity");
+		List<Emp> empList =registerService.getEmpInfoByNameAndPhone(name,phone);
+		System.out.println(empList);
+		return new ResponseEntity<>(empList,HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	public ResponseEntity<List<Emp>> deleteEmpInfo(@RequestParam("eid") int eid) {
+		System.out.println("registerEmpInfo1--ResponseEntity");
+		List<Emp> empList =registerService.deleteEmpInfo(name,phone);
+		System.out.println(empList);
+		return new ResponseEntity<>(empList,HttpStatus.OK);
+	}
+}

@@ -1,0 +1,29 @@
+package com.india.spring.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.india.spring.dto.EmpDTO;
+import com.india.spring.entity.Emp;
+import com.india.spring.service.RegisterService;
+import com.spring.india.repository.EmployeeRepository;
+
+@Service
+public class RegisterServiceImpl implements RegisterService {
+	
+	@Autowired
+	EmployeeRepository employeeRepository;
+	
+	
+	@Override
+	public EmpDTO registerEmpInfo(EmpDTO empDTO) {
+		
+		Emp employee=new Emp(EmpDTO.getID(),);
+		return null;
+	}
+
+	@Override
+	public EmpDTO registerEmpInfo1(EmpDTO empDTO) {
+		return null;
+	}
+}

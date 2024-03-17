@@ -1,7 +1,5 @@
 package com.india.spring.dto;
 
-import org.springframework.web.bind.annotation.RequestParam;
-
 public class EmpDTO {
 	int eid;
 	String name;

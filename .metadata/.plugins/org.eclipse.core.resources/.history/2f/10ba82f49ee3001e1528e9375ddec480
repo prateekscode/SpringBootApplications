@@ -1,0 +1,10 @@
+package com.india.spring.service;
+
+import com.india.spring.dto.EmpDTO;
+
+public interface RegisterService {
+	public EmpDTO registerEmpInfo(EmpDTO empDTO);
+	public EmpDTO registerEmpInfo1(EmpDTO empDTO);
+	public EmpDTO getEmpInfo(int eid);
+
+}
