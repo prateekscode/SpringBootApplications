@@ -1,5 +1,0 @@
-package com.india.spring.service.impl;
-com.india.spring.service.*;
-public class RegisterServiceImpl implements RegsiterService{
-
-}
