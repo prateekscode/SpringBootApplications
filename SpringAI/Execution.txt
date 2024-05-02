@@ -1,0 +1,5 @@
+1. For running this we need ollama download and installed from- "https://ollama.com/".
+2. And after installation run the "ollama run mistral" command in cmd to download the mistral ai model.
+3. Run the application.
+4. write url on browser "http://localhost:9090/ai/prompt?prompt=(which question you want to ask remove these round brackets before)".
+5. Now, its working.
