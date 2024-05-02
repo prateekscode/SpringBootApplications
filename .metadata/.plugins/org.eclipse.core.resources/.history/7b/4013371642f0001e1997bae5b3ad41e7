@@ -1,9 +1,0 @@
-package com.india.spring;
-
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-public class RegisterServiceImplTest {
-
-	RegisterServiceImpl registerServiceImpl;
-}

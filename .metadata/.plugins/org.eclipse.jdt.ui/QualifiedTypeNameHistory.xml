@@ -25,7 +25,6 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
     <fullyQualifiedTypeName name="jakarta.websocket.server.PathParam"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="java.lang.Iterable"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
@@ -39,4 +38,7 @@
     <fullyQualifiedTypeName name="com.india.spring.dto.EmpDTO"/>
     <fullyQualifiedTypeName name="org.assertj.core.api.Assertions"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="org.springframework.ai.chat.ChatResponse"/>
+    <fullyQualifiedTypeName name="org.springframework.ai.chat.prompt.Prompt"/>
 </qualifiedTypeNameHistroy>
